@@ -5,6 +5,10 @@ security:
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: emai
         users_in_memory: { memory: null }
     firewalls:
         dev:
@@ -32,4 +36,4 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/compte, roles: ROLE_USER }
