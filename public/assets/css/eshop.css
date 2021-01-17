@@ -9,3 +9,7 @@
     background-color: #c3c9d3be;
     padding-top: 25px;
 }
+.product-item h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+}
