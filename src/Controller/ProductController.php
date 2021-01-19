@@ -16,13 +16,28 @@ class ProductController extends AbstractController
         $this->entityManager = $entityManager;
     }
     /**
-     * @Route("/mes-produits", name="products")
+     * @Route("/produits", name="products")
      */
     public function index(): Response
     {
         $products = $this->entityManager->getRepository(Product::class)->findAll();
             return $this->render('product/index.html.twig', [
                 'products' => $products
+            ]);
+    }
+     /**
+     * @Route("/produit/{slug}", name="product")
+     */
+    public function show($slug)
+    {
+        $product = $this->entityManager->getRepository(Product::class)->findOneBySlug($slug);
+            
+            if(!$product) {
+                return $this->redirectToRoute('products');
+            }
+
+            return $this->render('product/show.html.twig', [
+                'product' => $product
             ]);
     }
 }
