@@ -16,7 +16,7 @@ class Cart
     {
         $cart = $this->session->get('cart', []);
 
-        if(!empty($cart[$id])) {
+        if(!empty($cart[$id])) { //permet d'incrémenter notre quantitée présente dans notre panier
             $cart[$id]++;
         } else {
             $cart[$id] = 1;
@@ -32,6 +32,6 @@ class Cart
 
     public function remove() 
     {
-        return $this->session->remove('cart');
+        return $this->session->remove('cart'); //permet de supprimer ou diminuer la quantité dans notre panier
     }
 }
