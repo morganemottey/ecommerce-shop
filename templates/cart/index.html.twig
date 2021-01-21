@@ -28,7 +28,11 @@ Retrouvez l'ensemble des produits que vous avez ajouter à votre panier
       </td>
       <td> x {{ product.quantity }}</td>
       <td>{{( product.product.prix / 100 )}} €</td>
-      <th>{{ ((product.product.prix * product.quantity) / 100 )}} €</th>
+      <td>{{ ((product.product.prix * product.quantity) / 100 )}} €</td>
+      <td>
+        <a href="{{ path('delete_to_cart', { 'id': product.product.id }) }}"/>
+        <img src="{{ asset('assets/img/delete.svg')}}" alt="Supprimer mon produit" height="18px"/>
+      </td>
     </tr>
         {% set total = total + (product.product.prix * product.quantity) %}
      {% endfor %}
