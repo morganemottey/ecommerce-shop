@@ -56,6 +56,9 @@
             {% else %}
                 <a href="{{path('app_login')}}">Connexion</a> | <a href="{{path('register')}}">Inscription</a>
             {% endif %}
+            <a href="{{path('cart')}}">
+                <img class="cart-icon" src="{{ asset('assets/img/shopping-cart.svg')}}" alt="Mon panier" height="20px"/>
+            </a>
             </div>
         </div>
     </nav>

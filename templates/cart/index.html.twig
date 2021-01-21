@@ -5,7 +5,7 @@
 {% block content %}
 <h1> Mon panier </h1>
 Retrouvez l'ensemble des produits que vous avez ajouter à votre panier
-<hr>
+{% if cart|length %}
 <table class="table">
   <thead>
     <tr>
@@ -43,4 +43,8 @@ Retrouvez l'ensemble des produits que vous avez ajouter à votre panier
     <b> Total de mon panier :</b> {{ (total / 100) }} €</b>
     <a class="btn btn-dark btn-block">Valider mon panier</a>
 </div>
+{% else %}
+    <hr>
+    <p><b>Votre panier est vide.</b></p>
+{% endif %}
 {% endblock %}
