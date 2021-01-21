@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}mes adresses{% endblock %}
+
+{% block content %}
+    <a href="" class="btn btn-info btn-sm float-right" >Gérer mes adresses</a>
+    <h1> Ajouter une adresse </h1>
+    <a href="{{ path('account_adress') }}" >Retour</a>
+    <hr>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-12">{{ form_row(form.adress)}}</div>
+        <div class="col-md-6">{{ form_row(form.name)}}</div>
+        <div class="col-md-6">{{ form_row(form.firstname)}}</div>
+        <div class="col-md-6">{{ form_row(form.lastname)}}</div>
+        <div class="col-md-6">{{ form_row(form.company)}}</div>
+        <div class="col-md-6">{{ form_row(form.codepostal)}}</div>
+        <div class="col-md-6">{{ form_row(form.city)}}</div>
+        <div class="col-md-6">{{ form_row(form.phone)}}</div>
+        <div class="col-md-12">{{ form_row(form.submit)}}</div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
