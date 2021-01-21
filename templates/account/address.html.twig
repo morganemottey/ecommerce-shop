@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}mes adresses{% endblock %}
+
+{% block content %}
+    <a href="" class="btn btn-info btn-sm float-right" >Ajouter une adresse</a>
+    <h1> Mes adresses </h1>
+    C'est dans cet espace que vous allez pouvoir gérer toutes vos adresses.
+    <a href="{{ path('account') }}" >Retour</a>
+    <hr>
+    {% if app.user.adresses|length == 0 %}
+        <p class="text-center">
+            Vous n'avez pas encore ajoutés d'adresses dans votre compte client. Pour en ajouter veuillez 
+            <a href="" >cliquer-ici</a>
+        </p>
+    {% else %}
+        Adresses
+    {% endif %}
+{% endblock %}
