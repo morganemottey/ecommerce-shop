@@ -45,3 +45,16 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+.form-check {
+    background-color: rgb(245, 243, 243);
+    padding: 20px 65px;
+    margin-top: 20px;
+}
+.col-form-label {
+    font-weight: bold;
+}
+.order-summary {
+    padding: 20px;
+    background-color: rgb(245, 243, 243);
+    margin-top: 22px;
+}
