@@ -41,3 +41,7 @@ body {
     padding-left: 20px;
     color: #0000
 }
+.block-small {
+    max-width: 600px;
+    margin: 0 auto;
+}
