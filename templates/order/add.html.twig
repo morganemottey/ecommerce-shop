@@ -19,7 +19,7 @@
              <div class="form-check">
                 {{ carrieres.name }} <br/>
                 {{ carrieres.description }} <br/>
-                {{ carrieres.prix|number_format(2, ',', '.' )}} €
+                {{ (carrieres.prix / 100 )|number_format(2, ',', '.' )}} €
             </div>
         </div>
         <div class="col-md-6">
@@ -49,11 +49,11 @@
             </div>
 
             <hr>
-            <strong>Sous total : </strong> {{ (total / 100) }} € <br/>
-            <strong>Livraison : </strong> {{ carrieres.prix }} €<br/>
+            <strong>Sous total : </strong> {{ (total / 100)|number_format(2, ',', '.' ) }} € <br/>
+            <strong>Livraison : </strong> {{ (carrieres.prix / 100)|number_format(2, ',', '.' ) }} €<br/>
             <hr>
-            <strong> Total : </strong> {{ ((total / 100) + carrieres.prix)|number_format(2, ',', '.' )}} €
-            <a class="btn btn-success btn-block mt-3" id="checkout-button"> Payer | {{ ((total / 100) + carrieres.prix)|number_format(2, ',', '.' )}} €</a>
+            <strong> Total : </strong> {{ ((total / 100) + (carrieres.prix / 100))|number_format(2, ',', '.' )}} €
+            <a class="btn btn-success btn-block mt-3" id="checkout-button"> Payer | {{ ((total / 100) + (carrieres.prix / 100))|number_format(2, ',', '.' )}} €</a>
         </div>
     </div>
 {% endblock %}
