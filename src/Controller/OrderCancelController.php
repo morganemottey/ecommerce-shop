@@ -7,9 +7,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Order;
-use App\Classe\Cart;
 
-class OrderValidateController extends AbstractController
+class OrderCancelController extends AbstractController
 {
     private $entityManager;
 
@@ -17,25 +16,20 @@ class OrderValidateController extends AbstractController
         $this->entityManager = $entityManager;
     }
     /**
-     * @Route("/commande/merci/{stripeSessionId}", name="order_validate")
+     * @Route("/commande/erreur/{stripeSessionId}", name="order_cancel")
      */
-    public function index(Cart $cart, $stripeSessionId): Response
+    public function index($stripeSessionId): Response
     {
         $order = $this->entityManager->getRepository(Order::class)->findOneByStripeSessionId($stripeSessionId);
         
         if(!$order || $order->getUser() != $this->getUser()) { // nous testons si l'order n'existe pas ou que l'utilisateur ne correspond au bon utilisateur, la commande ne pourra abotir
             return $this->redirectToRoute('home');
         }
-        // Modifier le statut isPaid de notre commande en le passant à 1
-        if(!$order->getIsPaid()) {
-            // Vider la session 'cart'
-            $cart->remove();
-            $order->setIsPaid(1);
-            $this->entityManager->flush();
-        }
-        // Envoyer un email à notre client pour lui confirmer la commande
+    
+        // Envoyer un email à notre client pour lui envoyer un echec de paiment
         // Afficher les queleues infos de la commande de l'utilisateur
-        return $this->render('order_success/index.html.twig', [
+        
+        return $this->render('order_cancel/index.html.twig', [
             'order' => $order
         ]);
     }
