@@ -18,6 +18,19 @@ class OrderRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Order::class);
     }
+    //findSuccesOrders()
+    // permet d'affciher les commandes dans le'espace membre de l'utilisateur
+    
+    public function findSuccessOrders($user) 
+    {
+        return $this->createQueryBuilder('o') // o = order
+            ->andWhere('o.isPaid = 1')
+            ->andWhere('o.user = :user') // :user (flag user)attention nous cherchons à récupérer les commandes de notre user en cours ! et non toutes les commandes
+            ->setParameter('user', $user) // à quoi correspond le flag :user ? , il correspond à la variable $user
+            ->orderBy('o.id' , 'DESC') // affichage de la commande enfonction de l'id par ordre descendant
+            ->getQuery()
+            ->getResult();
+    }
 
     // /**
     //  * @return Order[] Returns an array of Order objects
