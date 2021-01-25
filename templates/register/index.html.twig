@@ -3,7 +3,9 @@
 {% block content %}
     <h3>Formulaire d'inscription</h3>
 
-    Formulaire d'inscription
+    {% if notification %}
+        <div class="alert alert">{{ notification }}</div>
+    {% endif %}
 
     {{ form(form)}}
 

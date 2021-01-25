@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Order;
 use App\Classe\Cart;
+use App\Classe\Mail;
 
 class OrderValidateController extends AbstractController
 {
@@ -34,6 +35,9 @@ class OrderValidateController extends AbstractController
             $this->entityManager->flush();
         }
         // Envoyer un email à notre client pour lui confirmer la commande
+        $mail = new Mail();
+        $content ='Bonjour '.$order->getUser()->getFirstName();
+        $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstName(), "Merci pour votre commande", $content);
         // Afficher les queleues infos de la commande de l'utilisateur
         return $this->render('order_success/index.html.twig', [
             'order' => $order
