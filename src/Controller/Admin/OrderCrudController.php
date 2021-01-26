@@ -9,7 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
@@ -84,6 +84,7 @@ class OrderCrudController extends AbstractCrudController
             IdField::new('id'),
             DateTimeField::new('createAt', 'Passée le'),
             TextField::new('user.getFullname', 'Utilisateur'),
+            TextEditorField::new('delivery', 'Adresse de livraison')->onlyOnDetail(),
             MoneyField::new('total', 'Total produits')->setCurrency('EUR'),
             TextField::new('carrierNAme', 'Transport'),
             MoneyField::new('carrierPrice', 'Frais de port')->setCurrency('EUR'),
