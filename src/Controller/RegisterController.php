@@ -33,7 +33,7 @@ class RegisterController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) { 
             $user = $form->getData();
 
-            $search_email = $this->entityManager->getRepository(User::class)->findOneByMail($this->getUser());
+            $search_email = $this->entityManager->getRepository(User::class)->findOneByEmail($user->getEmail());
             
             if($search_email) {
                 $password = $encoder->encodePassword($user,$user->getPassword());
