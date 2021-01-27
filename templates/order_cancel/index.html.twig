@@ -9,5 +9,5 @@
         Il semblerait que votre paiment est échoué pour votrecommande n°<strong>{{ order.reference }}</strong>.<br/>
         Une confirmation d'erreur vient de vous être envoyée par email à l'adresse <strong>{{ order.user.email }}</strong>
     </p>
-    <a href="{{ path('order')}}" class="btn btn-info">Réessayer le paiement</a>
+    <a href="{{ path('home')}}" class="btn btn-info">Réessayer le paiement</a>
 {% endblock %}
