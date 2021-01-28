@@ -21,7 +21,7 @@ section:before {
     font-weight: 900;
     margin-top: 20vh;
 }
-header {
+/* header {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,7 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
+} */
 .logo img {
     max-width: 100px;
 }
@@ -73,13 +73,14 @@ header {
 .content .text a {
     display: inline-block;
     padding: 10px 30px;
-    color: #111;
-    background: #fff;
+    color: white;
+    background: black;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     letter-spacing: 2px;
     margin-top: 15px;
+    border-radius: 2rem;
 }
 .sci {
     position: absolute;
@@ -100,12 +101,10 @@ header {
 }
 
 @media(max-width: 767px) {
-    /* header {
-        padding: 20px 40px;
-    } */
     section {
         padding: 40px;
         overflow-x: hidden;
+        min-height: 80vh;
     }
     section:before {
        font-size: 20vh;
@@ -114,5 +113,8 @@ header {
     }
     .content {
         margin-top: 120px;
+    }
+    .sci {
+        display: none;
     }
 }

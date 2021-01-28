@@ -1,10 +1,33 @@
 body {
     position: relative;
-    /* background-color: black; */
 }
 nav {
     background-color: black !important;
     color: white;
+}
+.home-index__title {
+    position: relative;
+    margin-left: 4rem;
+    color: black;
+    font-weight: 600;
+    font-size : 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.home-index__p {
+    margin-top: 0;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: gray;
+    position: relative;
+    font-weight: 800;
+    text-align: center;
+    margin-left: 5rem;
+}
+.products-home {
+    margin-left: 3rem;
+    margin-right: 2rem;
 }
 .navbar-item-custom, .navbar-item-custom a {
     color: white;
@@ -62,4 +85,10 @@ nav {
     padding: 20px;
     background-color: rgb(245, 243, 243);
     margin-top: 22px;
+}
+@media screen and (max-width: 438px){
+    .products-home {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
 }

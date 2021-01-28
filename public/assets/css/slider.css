@@ -1,12 +1,6 @@
 .left-sidebar {
     position: fixed;
     top: 0;
-    /* left: 0;
-    width: 100px;
-    height: 100%;
-    background-color: black;
-    padding: 50px 40px;
-    z-index: 9; */
     left: 0;
     width: 43px;
     height: 100%;
@@ -27,7 +21,6 @@
     position: absolute;
     transform: rotate(-90deg);
     display: flex;
-    /* left: -120px; */
     left: -147px;
     bottom: 160px;
     width: 340px;
@@ -44,13 +37,12 @@
 }
 .wrapper {
     width:calc(100% - 100px);
-    margin-let: 100px;
+    margin-left: 100px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 50px;
 }
 
 .menu li {

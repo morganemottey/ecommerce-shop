@@ -2,85 +2,92 @@
 {% block content %}
 
 <div class="left-sidebar">
-    <div class="toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+	<div class="toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
 
-    <div class="social">
-        <a href="">Facebook</a>
-        <a href="">Twitter</a>
-        <a href="">Instagram</a>
-    </div>
+	<div class="social">
+		<a href="">Facebook</a>
+		<a href="">Twitter</a>
+		<a href="">Instagram</a>
+	</div>
 </div>
 <section>
-        {# <header>
-            <a href="" class="logo"><img src="{{asset('assets/img/logo/logo.png')}}"></a>
-            <div class="toggle"></div>
-        </header> #}
-        <div class="content">
-            <div class="imgBx">
-                <img src="{{ asset('assets/img/images/shoe.png') }}">
-            </div>
-            <div class="text">
-                <h2>Nike Air Zoom</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum eveniet consequuntur tempore. Maiores ex rem animi fugit 
-                quibusdam. Molestiae, itaque totam ex neque ea recusandae. 
-                Corporis in optio enim.</p>
-                <a href="">Details</a>
-            </div>
-        </div>
-        <ul class="sci">
-            <li><a href=""><img src="{{ asset('assets/img/social/facebook.png') }}"></a></li>
-            <li><a href=""><img src="{{ asset('assets/img/social/instagram.png') }}"></a></li>
-            <li><a href=""><img src="{{ asset('assets/img/social/twitter.png') }}"></a></li>
-        </ul>
-    </section>
-        {# {% block carousel %}{% endblock %} #}
-    
-<!-- Three columns of text below the carousel -->
-        <h3>Nos meilleurs ventes</h3>
-        <p>Découvrez les articles les plus vendus </p>
-        <div class="row">
-            {% for product in products %}
-            <div class="col-md-3">
-                {% include 'product/single_product.html.twig' %}
-            </div>
-            {% endfor %}
-        </div><!-- /.row -->
+	<div class="content">
+		<div class="imgBx">
+			<img src="{{ asset('assets/img/images/shoe.png') }}">
+		</div>
+		<div class="text">
+			<h2>Nike Air Zoom</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum eveniet consequuntur tempore. Maiores ex rem animi fugit 
+			quibusdam. Molestiae, itaque totam ex neque ea recusandae. 
+			Corporis in optio enim.</p>
+			<a href="">Details</a>
+		</div>
+	</div>
+	<ul class="sci">
+		<li>
+			<a href=""><img src="{{ asset('assets/img/social/facebook.png') }}"></a>
+		</li>
+		<li>
+			<a href=""><img src="{{ asset('assets/img/social/instagram.png') }}"></a>
+		</li>
+		<li>
+			<a href=""><img src="{{ asset('assets/img/social/twitter.png') }}"></a>
+		</li>
+	</ul>
+</section>
+{# {% block carousel %}{% endblock %} #}
+
+	<!-- Three columns of text below the carousel -->
+	<h3 class="home-index__title">Nos meilleurs ventes</h3>
+	<p class="home-index__p">Découvrez les articles les plus vendus
+	</p>
+	<div class="row products-home">
+		{% for product in products %}
+			<div class="col-md-4">
+				{% include 'product/single_product.html.twig' %}
+			</div>
+		{% endfor %}
+	</div>
+	<!-- /.row -->
 
 
-        <!-- START THE FEATURETTES -->
+	<!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Ne passez pas à côté <span class="text-muted"></span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <img src="{{ asset('assets/img/logo/swoosh.png')}}" width="50px"/>
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">Ne passez pas à côté
+				<span class="text-muted"></span>
+			</h2>
+			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		<div class="col-md-5">
+			<img src="{{ asset('assets/img/logo/swoosh.png')}}" width="50px"/>
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Informations concernant les commandes <span class="text-muted"></span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img src="{{ asset('assets/img/logo/swoosh.png')}}" width="50px"/>
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2">
+			<h2 class="featurette-heading">Informations concernant les commandes
+				<span class="text-muted"></span>
+			</h2>
+			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		<div class="col-md-5 order-md-1">
+			<img src="{{ asset('assets/img/logo/swoosh.png')}}" width="50px"/>
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr
+	class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
+<!-- /END THE FEATURETTES -->
 {% endblock %}
-{% block slide %}
-{% endblock %}
-
+{% block slide %}{% endblock %}
