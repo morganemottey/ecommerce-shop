@@ -1,0 +1,186 @@
+.left-sidebar {
+    position: fixed;
+    top: 0;
+    /* left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: black;
+    padding: 50px 40px;
+    z-index: 9; */
+    left: 0;
+    width: 43px;
+    height: 100%;
+    background-color: black;
+    padding: 30px 39px;
+}
+.toggle {
+    display: block;
+    width: 25px;
+}
+.toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 0 0 4px;
+}
+.social {
+    position: absolute;
+    transform: rotate(-90deg);
+    display: flex;
+    /* left: -120px; */
+    left: -147px;
+    bottom: 160px;
+    width: 340px;
+    height: 100px;
+    line-height: 100px;
+}
+.social a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 15px;
+}
+.wrapper {
+    width:calc(100% - 100px);
+    margin-let: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+.menu li:last-child {
+    margin-right: 0;
+}
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    position: relative;
+}
+.menu li a:before,
+.toggle-menu ul li a:before {
+    content:'';
+    position: absolute;
+     width: 0;
+     height: 100%;
+     background-color: lightgray;
+     z-index: -1;
+     transition: all ease 0.5s;
+}
+.menu li a:hover::before,
+.toggle-menu ul li a:hover::before {
+    width: 100%
+}
+.slider .text {
+    width: 40%;
+    float: left;
+    padding: 50px 0 0 50px;
+}
+.slider .img {
+    width: 60%;
+    float: left;
+}
+.slider .img img {
+    margin: 0 auto;
+}
+.slider h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+.slider p {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    margin: 30px 0 70px;
+}
+.slider a {
+    display: inline-block;
+    padding: 15px 48px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    background-image: linear-gradient(45deg, #d001fe 0%, #1aa1d9 100%);
+    box-shadow: 10px 18px 50px 0 rgba(95, 157, 208, 0.5);
+    transition: all ease 0.2s
+}
+.slider a:hover {
+    box-shadow: none;
+    margin-top: 5px;
+}
+.slick-dots {
+    text-align: left;
+    left: 50px;
+    bottom :50px;
+}
+.slick-dots li {
+    margin: 0;
+}
+.slick-dots li button:before {
+    font-size: 12px;
+}
+.slick-dots li.slick-active button:before {
+    color: #5f9dd0;
+}
+.slick-track {
+    padding-bottom: 60px;
+}
+.shape {
+    width: 490px;
+    height: 490px;
+    background-image: linear-gradient(45deg, rgb(208,1254) 0%, #1aa1d9 100%);
+    border-radius: 100%;
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    z-index: -1;
+}
+.shape-inner {
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    background-color: #fff;
+    border-radius: 100%;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.toggle-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: calc(100% - 100px);
+    height: 100%;
+    background-color: #fff;
+    margin-left: 100px;
+    z-index: 8;
+    overflow-y: auto;
+    transition: all ease 0.5s;
+}
+.toggle-menu ul li {
+    list-style: none;
+    display: block;
+}
+.toggle-menu ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 55px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin: 30px 100px;
+}
+
+.toggle-menu .open {
+    left: 0;
+}

@@ -1,5 +1,10 @@
 body {
     position: relative;
+    /* background-color: black; */
+}
+nav {
+    background-color: black !important;
+    color: white;
 }
 .navbar-item-custom, .navbar-item-custom a {
     color: white;
