@@ -41,6 +41,8 @@ nav {
 .navbar-item-custom, .navbar-item-custom a {
     color: white;
 }
+
+/* Footer */
 .footer-custom {
     text-align: center;
     position: absolute;
@@ -55,6 +57,10 @@ nav {
     color: white;
     text-decoration: none;
 }
+.footer-image {
+    margin: auto;
+}
+/* Produits */
 .product-item h5 {
     text-transform: uppercase;
     font-size: 15px;

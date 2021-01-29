@@ -28,14 +28,15 @@
         }
     </style>
     <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ asset('assets/css/carousel.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/home.css')}}">
-    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> #}
-    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"> #}
     <link rel="stylesheet" href="{{ asset('assets/css/eshop.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/single_product.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/cardProducts.css')}}">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
 <header>
@@ -83,7 +84,8 @@
 
         {% block content %}
         {% endblock %}
-
+        {% block product %}
+        {% endblock %}
     </div><!-- /.container -->
     {% if block('carousel') is defined %}
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -124,17 +126,8 @@
     </footer>
 </main>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
- <!--Slick Carousel-->
-    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> #}
-    <!--Jquery-->
-    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> #}
-    <!--AnimeJS-->
-    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> #}
-    {# <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script> #}
-    {% block javascripts %}
-        {# {{ encore_entry_script_tags('app') }} #}
-    {% endblock %}
-    {% block script %}
-    {% endblock %}
+<script src="{{ asset('assets/js/single_product.js') }}"></script>
+{% block script %}
+{% endblock %}
 </body>
 </html>
