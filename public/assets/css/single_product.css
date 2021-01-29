@@ -25,6 +25,7 @@ body{
     align-items: center;
     padding: 40px;
     overflow: hidden;
+    margin-top: 3rem;
 }
 
 .card-product{
@@ -372,7 +373,6 @@ body{
         left: 5%;
     }
 }
-
 @media (max-width: 600px){
     .share{
         width: 40px;
