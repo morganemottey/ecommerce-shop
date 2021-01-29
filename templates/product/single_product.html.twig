@@ -1,14 +1,8 @@
-{# <div class="product-item text-center">
-    <a href={{ path('product', { 'slug': product.slug }) }}><img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="img-fluid"/></a>
-    <h5>{{ product.name }}</h5>
-    <span class="product-subtitle">{{ product.subtitle }}</span>
-    <span class="product-price">{{( product.prix / 100 )}} €</span>
-</div> #}
+
 <div class="product-item text-center">
 <article class="card">
     <div class="card__img">
         <a href={{ path('product', { 'slug': product.slug }) }}><img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="img-fluid"/></a>
-        {# <img src="assets/img/images/img1.png" alt=""> #}
     </div>
     <div class="card__name">
         <p>{{ product.name }}</p>
@@ -18,8 +12,6 @@
         <div>
             <span class="card__preci card__preci--before">{{ product.subtitle }}</span>
             <span class="card__preci card__preci--now">{{( product.prix / 100 )}} €</span>
-            {# <span class="card__preci card__preci--before">$990.00</span>
-            <span class="card__preci card__preci--now">$749.00</span> #}
         </div>
         <a href="" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
     </div>

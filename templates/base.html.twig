@@ -82,9 +82,9 @@
 
     <div class="marketing {% if block('carousel') is not defined %}{% endif %}">
 
-        {% block content %}
-        {% endblock %}
         {% block product %}
+        {% endblock %}
+           {% block content %}
         {% endblock %}
     </div><!-- /.container -->
     {% if block('carousel') is defined %}
@@ -127,6 +127,7 @@
 </main>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="{{ asset('assets/js/single_product.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 {% block script %}
 {% endblock %}
 </body>

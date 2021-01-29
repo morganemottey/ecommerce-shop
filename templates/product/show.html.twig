@@ -2,53 +2,14 @@
 
 {% block title %}{{ product.name }} - MM{% endblock %}
 
-{% block content %}
-    {# <h1>{{ product.name }}</h1>
-    <div class="row">
-        <div class="col-md-5">
-        </div>
-        <div class="col-md-7 my-auto">
-            <h3>{{ product.name }} </h3>
-            <span class="product-page-price">{{( product.prix / 100 )}} €</span>
-            <br>
-            <span class="product-subtitle">{{ product.subtitle }}</span>
-            <hr>
-            <p> {{ product.description }}</p>
-            <a href="{{ path('add_to_cart', { 'id': product.id }) }}" class="btn btn-dark">Ajouter au panier</a>
-        </div>
-    </div> #}
-    <hr>
-     {# <h3>Nos meilleurs ventes</h3>
-        <p>Découvrez les articles les plus vendus </p>
-        <div class="row">
-            {% for product in products %}
-            <div class="col-md-3">
-                {% include 'product/single_product.html.twig' %}
-            </div>
-            {% endfor %}
-        </div> #}
-{% endblock %}
 {% block product %}
  <div class="container-product">
         <div class="card-product">
             <div class="shoeBackground">
-                <div class="gradients">
-                    <div class="gradient second" color="blue"></div>
-                    <div class="gradient" color="red"></div>
-                    <div class="gradient" color="green"></div>
-                    <div class="gradient" color="orange"></div>
-                    <div class="gradient" color="black"></div>
-                </div>
                 <h1 class="nike">nike</h1>
                 <img src="assets/shoes/logo.png" alt="" class="logo">
                 <a href="#" class="share"><i class="fas fa-share-alt"></i></a>
-                {# <img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="img-fluid mt-2" style="width: 300px"/> #}
-                <img src="{{ asset('assets/img/images/shoes/blue.png') }}" alt="" class="shoe show" color="blue">
-                <img src="{{ asset('assets/img/images/shoes/red.png')}}" alt="" class="shoe" color="red">
-                <img src="{{ asset('assets/img//images/shoes/green.png') }}" alt="" class="shoe" color="green">
-                <img src="{{ asset('assets/img/images/shoes/orange.png') }}" alt="" class="shoe" color="orange">
-                <img src="{{ asset('assets/img/images/shoes/black.png') }}" alt="" class="shoe" color="black">
-
+                <img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="nike-img"/>
             </div>
             <div class="info">
                 <div class="shoeName">
@@ -93,4 +54,15 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block content %}
+<h3>Nos meilleurs ventes</h3>
+    <p>Découvrez les articles les plus vendus </p>
+        <div class="row">
+        {% for product in products %}
+            <div class="col-md-3">
+                {% include 'product/single_product.html.twig' %}
+            </div>
+        {% endfor %}
+        </div>
 {% endblock %}

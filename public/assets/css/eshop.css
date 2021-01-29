@@ -28,16 +28,22 @@ nav {
 .featurette {
     margin-left: 5rem;
 }
-/* .featurette__left-img-home {
-    transform: rotate(-39deg);
+/* All produits */
+.right-column {
+    margin-top: 4rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
-.featurette__right-img-home img{
-    transform:rotate(-45deg)
-} */
 .products-home {
     margin-left: 3rem;
     margin-right: 2rem;
 }
+.products-title {
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+/* Navbar */
 .navbar-item-custom, .navbar-item-custom a {
     color: white;
 }
@@ -94,11 +100,6 @@ nav {
 .block-small {
     max-width: 600px;
     margin: 0 auto;
-}
-.form-check {
-    background-color: rgb(245, 243, 243);
-    padding: 20px 65px;
-    margin-top: 20px;
 }
 .col-form-label {
     font-weight: bold;
