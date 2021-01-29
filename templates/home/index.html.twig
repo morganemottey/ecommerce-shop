@@ -39,7 +39,6 @@
 		</li>
 	</ul>
 </section>
-{# {% block carousel %}{% endblock %} #}
 
 	<!-- Three columns of text below the carousel -->
 	<h3 class="home-index__title">Nos meilleurs ventes</h3>
@@ -60,34 +59,34 @@
 	<hr class="featurette-divider">
 
 	<div class="row featurette">
-		<div class="col-md-7">
+		<div class="col-md-6">
 			<h2 class="featurette-heading">Ne passez pas à côté
 				<span class="text-muted"></span>
 			</h2>
 			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 		</div>
 		<div class="col-md-5">
-			<img src="{{ asset('assets/img/logo/swoosh.png')}}" width="50px"/>
+			<img class="featurette__left-img-home"src="{{ asset('assets/img/images/design_home_nike_1.jpg')}}"/>
 		</div>
 	</div>
 
 	<hr class="featurette-divider">
 
 	<div class="row featurette">
-		<div class="col-md-7 order-md-2">
+		<div class="col-md-6 order-md-2">
 			<h2 class="featurette-heading">Informations concernant les commandes
 				<span class="text-muted"></span>
 			</h2>
 			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
 		</div>
 		<div class="col-md-5 order-md-1">
-			<img src="{{ asset('assets/img/logo/swoosh.png')}}" width="50px"/>
+			<img class="featurette__right-img-home" src="{{ asset('assets/img/images/design_home_nike_6.jpg')}}"/>
 		</div>
 	</div>
 
-	<hr
-	class="featurette-divider">
+	<hr class="featurette-divider">
 
 <!-- /END THE FEATURETTES -->
 {% endblock %}
+{# {% block carousel %}{% endblock %} #}
 {% block slide %}{% endblock %}

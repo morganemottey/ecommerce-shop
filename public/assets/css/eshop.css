@@ -25,6 +25,15 @@ nav {
     text-align: center;
     margin-left: 5rem;
 }
+.featurette {
+    margin-left: 5rem;
+}
+/* .featurette__left-img-home {
+    transform: rotate(-39deg);
+}
+.featurette__right-img-home img{
+    transform:rotate(-45deg)
+} */
 .products-home {
     margin-left: 3rem;
     margin-right: 2rem;
@@ -34,10 +43,17 @@ nav {
 }
 .footer-custom {
     text-align: center;
-    position: fixed;
+    position: absolute;
+    z-index: -3;
+    color: white;
     width: 100%;
-    background-color: #c3c9d3be;
+    background-color: black;
+    background: linear-gradient(to top, #000, #0000);
     padding-top: 25px;
+}
+.footer-custom a {
+    color: white;
+    text-decoration: none;
 }
 .product-item h5 {
     text-transform: uppercase;

@@ -9,7 +9,6 @@
     <title>{% block title %} e-Shop {% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     {% block javascript %}
     {% endblock %}
     <style>
@@ -29,10 +28,11 @@
         }
     </style>
     <!-- Custom styles for this template -->
+    <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{ asset('assets/css/carousel.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/home.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> #}
+    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"> #}
     <link rel="stylesheet" href="{{ asset('assets/css/eshop.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/cardProducts.css')}}">
@@ -75,7 +75,17 @@
     </nav>
 </header>
 <main role="main">
-{% if block('carousel') is defined %}
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="marketing {% if block('carousel') is not defined %}{% endif %}">
+
+        {% block content %}
+        {% endblock %}
+
+    </div><!-- /.container -->
+    {% if block('carousel') is defined %}
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
         {% for key,header in header %}
@@ -105,19 +115,6 @@
         </a>
     </div>
 {% endif %}
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="marketing {% if block('carousel') is not defined %}{% endif %}">
-
-        {% block content %}
-        {% endblock %}
-
-    </div><!-- /.container -->
-
     <!-- FOOTER -->
     <footer class="footer-custom">
         <p>&copy; 2017-2020 Eshop, Inc. <br/>
