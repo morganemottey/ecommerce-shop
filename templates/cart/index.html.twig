@@ -28,18 +28,18 @@ Retrouvez l'ensemble des produits que vous avez ajouter à votre panier
       </td>
       <td> 
         <a href="{{ path('decrease_to_cart', { 'id': product.product.id }) }}">
-            <img src="{{ asset('assets/img/moins.svg')}}" alt="Supprimer la quantité de mon produit" height="12px"/>
+            <img class="icon-basket" src="{{ asset('assets/img/icons/moins.svg')}}" alt="Supprimer la quantité de mon produit" height="12px"/>
         </a>
         x {{ product.quantity }}
          <a href="{{ path('add_to_cart', { 'id': product.product.id }) }}">
-            <img src="{{ asset('assets/img/plus.svg')}}" alt="Ajouter un produit" height="12px"/>
+            <img class="icon-basket" src="{{ asset('assets/img/icons/plus.svg')}}" alt="Ajouter un produit" height="12px"/>
         </a>
       </td>
       <td>{{( product.product.prix / 100 )}} €</td>
       <td>{{ ((product.product.prix * product.quantity) / 100 )}} €</td>
       <td>
         <a href="{{ path('delete_to_cart', { 'id': product.product.id }) }}"/>
-        <img src="{{ asset('assets/img/delete.svg')}}" alt="Supprimer mon produit" height="18px"/>
+        <img class="icon-basket" src="{{ asset('assets/img/icons/delete.svg')}}" alt="Supprimer mon produit" height="18px"/>
       </td>
     </tr>
         {% set total = total + (product.product.prix * product.quantity) %}

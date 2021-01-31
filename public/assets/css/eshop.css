@@ -83,7 +83,7 @@ a {
     width: 100%;
     background-color: black;
     background: linear-gradient(to top, #000, #0000);
-    padding-top: 55rem;
+    padding-top: 10rem;
 }
 .footer-custom a {
     color: white;
@@ -117,6 +117,9 @@ a {
 }
 .product-page-price {
     font-size: 18px;
+}
+.icon-basket {
+    height: 12px;
 }
 .cart-icon {
     height: 20px;
